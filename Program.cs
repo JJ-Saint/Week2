@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+
 
 namespace ClinicaVeterinaria
 {
@@ -40,25 +38,18 @@ namespace ClinicaVeterinaria
             p3.Mascota.Raza = "Golden";
             pacientes.Add(p3);
 
-            // Filtrar solo perros
             var perros = pacientes.Where(p => p.Mascota.Especie == "Perro").ToList();
 
-            // Ordenar por edad
             var ordenados = pacientes.OrderBy(p => p.Edad).ToList();
 
-            // Sacar solo nombres
             var nombres = pacientes.Select(p => p.Nombre).ToList();
 
-            // Agrupar por especie
             var grupos = pacientes.GroupBy(p => p.Mascota.Especie);
 
-            // Contar cuantos perros
             int totalPerros = pacientes.Count(p => p.Mascota.Especie == "Perro");
 
-            // Ver si hay mascota sin raza
             bool haySinRaza = pacientes.Any(p => p.Mascota.Raza == "No definida");
 
-            // El mas joven
             var masJoven = pacientes.OrderBy(p => p.Edad).FirstOrDefault();
 
             Console.ReadKey();
