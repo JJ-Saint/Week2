@@ -1,24 +1,32 @@
-using System;
 
-namespace ClinicaVeterinaria.Models
+namespace Console.Models.Pet;
+
+
+
+
+
+public class Pet
+
+
 {
-    public class Paciente
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
-        public string Telefono { get; set; }
-        public string Sintoma { get; set; }
-        public Mascota Mascota { get; set; }
 
-        public Paciente(int id, string nombre, int edad, string telefono, string sintoma, Mascota mascota)
-        {
-            Id = id;
-            Nombre = nombre;
-            Edad = edad;
-            Telefono = telefono;
-            Sintoma = sintoma;
-            Mascota = mascota;
-        }
-    }
+
+    public string Name { get; set; }
+
+
+    public string Breed { get; set; }
+
+
+    public int Age { get; set; }
+
+
+    public string OwnerName { get; set; }
+
+
+    public string Symptom { get; set; }
+
+
+    
+
+
 }
